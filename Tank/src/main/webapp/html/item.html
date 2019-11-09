@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>item experience </title>
+    <link type="text/css" rel="stylesheet" href="../css/item.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/print.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/simple-calendar.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/stylesheet.css"/>
+    <script type="text/javascript" src="../laydate/laydate.js"></script>
+    <script type="text/javascript" src="../js/item.js"></script>
+
+
+</head>
+<body>
+<form action="success.html">
+
+
+    <div id="main">
+        <p id="experience">项目经验</p>
+        <div id="left">
+            <p id="l_name">项目名称</p>
+            <p id="l_link">项目链接</p>
+            <p id="l_lift_time">项目周期</p>
+            <p id="l_desc">项目描述</p>
+            <p id="l_achievement">你的成就</p>
+        </div>
+        <div id="right">
+            <div id="r_name">
+                <input type="text" name="r_item_name" placeholder="请填写项目名称" id="r_item_name">
+
+            </div>
+            <div id="r_link">
+                <input type="text" name="r_link_name" placeholder="请填写项目链接（选填）" id="r_link_name">
+            </div>
+            <div id="r_lift_time">
+                <!--            引用日历插件-->
+                <input type="text" name="r_link_name" placeholder="开始时间" id="r_date_begin">
+                <script>
+                    laydate.render({
+                            elem: '#r_date_begin'
+                        }
+                    )
+                </script>
+                <input type="text" name="r_link_name" placeholder="结束时间" id="r_date_end">
+                <script>
+                    laydate.render({
+                            elem: '#r_date_end'
+                        }
+                    )
+                </script>
+
+            </div>
+
+            <!--       项目描述-->
+            <textarea type="text" id="txt"></textarea>
+            <div id="count"></div>
+
+            <!--    你的成就-->
+            <textarea  type="text" id="txt1">
+
+            </textarea>
+            <div id="count1"></div>
+            <!--            </div>-->
+
+            <input type="submit" value="保存" id="submit">
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
