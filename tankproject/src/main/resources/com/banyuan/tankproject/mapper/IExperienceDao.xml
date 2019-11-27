@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.banyuan.tankproject.mapper.IExperienceDao">
+    <insert id="saveExperience" parameterType="com.banyuan.tankproject.domain.DO.Experience">
+        insert into project_experience(project_name,project_url,begin_time ,end_time ,project_describe ,achievement,user_id,delete_status) values(#{project_name},#{project_url},#{begin_time},#{end_time},#{project_describe},#{achievement},#{user_id},#{delete_status});
+    </insert>
+</mapper>

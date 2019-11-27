@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tank.mapper.IUserDao">
+    <!--    配置查询所有(findAll是IUserDao的方法)-->
+    <!--    将结果resultType返回到User中-->
+    <select id="findAll" resultType="com.banyuan.tankproject.domain.DO.Login_user">
+        select * from user;
+    </select>
+    <insert id="saveUser" parameterType="com.banyuan.tankproject.domain.DO.Login_user">
+        insert into user(name,tel,score,pwd,deduction)values (#{name},#{tel},#{score},#{pwd},#{deduction});
+    </insert>
+    <update id="updateUser" parameterType="com.banyuan.tankproject.domain.DO.Login_user">
+        update user set score=#{score} where name=#{name};
+    </update>
+    <delete id="deleteUser" parameterType="java.lang.String">
+delete from user where name=#{name};
+    </delete>
+</mapper>
